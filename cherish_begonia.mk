@@ -28,11 +28,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, device/redmi/begonia/device.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/potato/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := begonia
-PRODUCT_NAME := potato_begonia
+PRODUCT_NAME := cherish_begonia
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 8 Pro
 PRODUCT_MANUFACTURER := Xiaomi
@@ -44,4 +44,15 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="begonia" \
     TARGET_DEVICE="begonia"
 
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# CherishOS Build Type
+CHERISH_BUILD_TYPE := BETA
+
+# Maintainer
+PRODUCT_GENERIC_PROPERTIES += \
+    ro.cherish.maintainer=OP2KT
+
